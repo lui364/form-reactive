@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/src/app/component/reactive/reactive.component.css">
+<div class="container">
+    <form [formGroup]="login">
+        <div  class="form-group">
+        <label for="name">NOMBRE:</label>
+        <input type="text" formControlName="name" name="lastName" class="form-control" placeholder="Escriba su nombre">
+    </div>
+
+    <div  class="form-group">
+        <label for="lastName">APELLIDO:</label>
+        <input type="text" formControlName="lastName" name="lastName" class="form-control" placeholder="Escriba su apellido">
+    </div>
+
+    <div  class="form-group">
+        <label for="age">Age:</label>
+        <input type="text" formControlName="age" name="age" class="form-control" placeholder="Escriba su edad ">
+    </div>
+
+    <div  class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" formControlName="email" name="email" class="form-control" placeholder="Escriba su email">
+    </div>
+<br>
+    <button class="btn btn-success" (click)="onSaved()" [disabled]="!login.valid">GUARDAR</button>
+
+    </form>
+</div>
